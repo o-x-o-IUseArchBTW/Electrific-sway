@@ -1,4 +1,4 @@
-# electrific-Sway
+# electrific Sway DotFiles
 
 A Sway rice built around a black and cyan color scheme. I wanted the colors to feel consistent all the way around.
 
