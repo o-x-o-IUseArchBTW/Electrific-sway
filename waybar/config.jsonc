@@ -1,0 +1,116 @@
+
+{
+    "layer": "top",
+    "position": "top",
+    "height": 28,
+    "spacing": 0,
+
+    "modules-left": [
+        "sway/workspaces",
+        "sway/mode"
+    ],
+
+    "modules-center": [
+        "sway/window"
+    ],
+
+    "modules-right": [
+        "cpu",
+        "memory",
+        "temperature",
+        "network",
+        "custom/bluetooth",
+        "pulseaudio",
+        "tray",
+        "custom/notifications",
+        "clock"
+    ],
+
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": []
+        }
+    },
+
+    "sway/mode": {
+        "format": "[{}]"
+    },
+
+    "sway/window": {
+        "max-length": 50,
+        "format": "{}"
+    },
+
+    "cpu": {
+        "interval": 2,
+        "format": "CPU {usage}%",
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "RAM {percentage}%",
+        "states": {
+            "warning": 75,
+            "critical": 90
+        }
+    },
+
+    "temperature": {
+        "interval": 5,
+        "format": "TEMP {temperatureC}°C",
+        "critical-threshold": 80,
+        "format-critical": "TEMP {temperatureC}°C!"
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "NET {essid}",
+        "format-ethernet": "NET connected",
+        "format-disconnected": "NET offline",
+        "tooltip": true
+    },
+
+    "custom/bluetooth": {
+        "exec": "bash -c 'if bluetoothctl show 2>/dev/null | grep -q \"Powered: yes\"; then if bluetoothctl devices Connected 2>/dev/null | grep -q Device; then echo \"BT connected\"; else echo \"BT on\"; fi; else echo \"BT off\"; fi'",
+        "interval": 5,
+        "format": "{}",
+        "on-click": "blueman-manager",
+        "tooltip": true
+    },
+
+    "pulseaudio": {
+        "format": "VOL {volume}%",
+        "format-muted": "VOL muted",
+        "scroll-step": 5,
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 8
+    },
+
+    "custom/notifications": {
+        "format": "󰂚",
+        "tooltip": "Open notification center",
+        "on-click": "swaync-client -t",
+        "on-click-right": "swaync-client -d"
+    },
+
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    }
+}
