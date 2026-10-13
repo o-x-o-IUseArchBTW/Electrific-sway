@@ -1,0 +1,202 @@
+
+:root {
+  --cc-bg: rgba(0, 1, 1, 0.96);
+  --noti-border-color: rgba(0, 217, 255, 0.55);
+  --noti-bg: 0, 1, 1;
+  --noti-bg-alpha: 0.96;
+  --noti-bg-darker: rgb(0, 10, 13);
+  --noti-bg-hover: rgb(0, 28, 34);
+  --noti-bg-focus: rgba(0, 169, 199, 0.18);
+  --noti-close-bg: rgb(0, 70, 82);
+  --noti-close-bg-hover: rgb(0, 105, 120);
+  --text-color: rgb(213, 229, 233);
+  --text-color-disabled: rgb(100, 140, 148);
+  --bg-selected: rgb(0, 217, 255);
+  --notification-icon-size: 64px;
+  --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
+  --notification-group-icon-size: 32px;
+  --border: 1px solid var(--noti-border-color);
+  --border-radius: 0px;
+  --notification-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8),
+    0 2px 8px 2px rgba(0, 0, 0, 0.65);
+  --font-size-body: 15px;
+  --font-size-summary: 16px;
+  /* Backwards compatibility */
+  --hover-tranistion: background 0.15s ease-in-out;
+  --group-collapse-tranistion: opacity 400ms ease-in-out;
+  --hover-transition: var(--hover-tranistion);
+  --group-collapse-transition: var(--group-collapse-tranistion);
+}
+
+/* Fallback colors for older GTK CSS themes */
+@define-color cc-bg rgba(0, 1, 1, 0.96);
+@define-color noti-border-color rgba(0, 217, 255, 0.55);
+@define-color noti-bg rgba(0, 1, 1, 0.96);
+@define-color noti-bg-opaque rgb(0, 1, 1);
+@define-color noti-bg-darker rgb(0, 10, 13);
+@define-color noti-bg-hover rgb(0, 28, 34);
+@define-color noti-bg-hover-opaque rgb(0, 28, 34);
+@define-color noti-bg-focus rgba(0, 169, 199, 0.18);
+@define-color noti-close-bg rgba(0, 70, 82, 0.9);
+@define-color noti-close-bg-hover rgb(0, 105, 120);
+@define-color text-color rgb(213, 229, 233);
+@define-color text-color-disabled rgb(100, 140, 148);
+@define-color bg-selected rgb(0, 217, 255);
+
+/* Global */
+* {
+  font-family: "BigBlueTermPlus Nerd Font Mono";
+  font-size: 14px;
+}
+
+/* Notification center */
+.control-center {
+  background: var(--cc-bg);
+  color: var(--text-color);
+  border: 1px solid #00d9ff;
+  border-radius: 0px;
+}
+
+/* Notifications */
+.notification-row {
+  outline: none;
+}
+
+.notification {
+  background: rgba(0, 1, 1, 0.96);
+  border: 1px solid rgba(0, 217, 255, 0.55);
+  border-radius: 0px;
+  color: var(--text-color);
+  margin: 6px;
+  padding: 4px;
+  box-shadow: var(--notification-shadow);
+}
+
+.notification-content {
+  background: transparent;
+}
+
+.summary {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.body {
+  color: #d5e5e9;
+}
+
+.time {
+  color: #006b78;
+}
+
+.notification:hover {
+  background: #001c22;
+}
+
+/* Notification buttons */
+.notification-action {
+  background: #000101;
+  color: #00d9ff;
+  border: 1px solid #006b78;
+  border-radius: 0px;
+  margin: 4px;
+}
+
+.notification-action:hover {
+  background: #002830;
+  border-color: #00d9ff;
+}
+
+/* Close buttons */
+.close-button {
+  background: #004652;
+  color: #d5e5e9;
+  border-radius: 0px;
+}
+
+.close-button:hover {
+  background: #006b78;
+  color: #ffffff;
+}
+
+/* Control center widgets */
+.widget-title {
+  color: #00d9ff;
+  font-weight: bold;
+  margin: 8px;
+}
+
+.widget-title > button {
+  background: #000101;
+  color: #00d9ff;
+  border: 1px solid #006b78;
+  border-radius: 0px;
+}
+
+.widget-title > button:hover {
+  background: #002830;
+  border-color: #00d9ff;
+}
+
+.widget-dnd {
+  color: #d5e5e9;
+  margin: 8px;
+}
+
+.widget-dnd > switch {
+  background: #002830;
+  border: 1px solid #006b78;
+}
+
+.widget-dnd > switch:checked {
+  background: #006b78;
+  border-color: #00d9ff;
+}
+
+.widget-dnd > switch slider {
+  background: #d5e5e9;
+}
+
+.widget-label {
+  color: #d5e5e9;
+}
+
+.widget-mpris {
+  background: #000101;
+  border: 1px solid #006b78;
+  border-radius: 0px;
+  margin: 6px;
+}
+
+.widget-mpris-player {
+  padding: 8px;
+}
+
+.widget-mpris-title {
+  color: #00d9ff;
+  font-weight: bold;
+}
+
+.widget-mpris-subtitle {
+  color: #d5e5e9;
+}
+
+.widget-mpris button {
+  background: transparent;
+  color: #00d9ff;
+  border-radius: 0px;
+}
+
+.widget-mpris button:hover {
+  background: #002830;
+}
+
+/* Scrollbars */
+scrollbar slider {
+  background: #006b78;
+  border-radius: opx;
+}
+
+scrollbar slider:hover {
+  background: #00d9ff;
+}
