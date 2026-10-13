@@ -1,0 +1,28 @@
+
+add_newline = true
+command_timeout = 1000
+
+
+format = """
+[╭─](bold cyan)$username$hostname$directory
+[╰─](bold cyan)$character"""
+
+[username]
+show_always = true
+style_user = "bold purple"
+format = "[$user]($style) "
+
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncate_to_repo = false
+format = "[$path]($style) "
+
+[git_branch]
+symbol = "git:"
+style = "bold purple"
+format = "[$symbol$branch]($style) "
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
