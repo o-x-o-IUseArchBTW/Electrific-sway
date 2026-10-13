@@ -1,0 +1,55 @@
+
+* {
+    font-family: "BigBlueTermPlus Nerd Font Mono";
+    font-size: 13px;
+    color: #d5e5e9;
+}
+
+window {
+    background-color: #000101;
+    border: 2px solid #00d9ff;
+    border-radius: 0px;
+}
+
+#outer-box {
+    padding: 12px;
+}
+
+#input {
+    background-color: #080c0e;
+    color: #00d9ff;
+    border: 1px solid #006b78;
+    border-radius: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#inner-box {
+    background-color: transparent;
+}
+
+#scroll {
+    margin-top: 4px;
+}
+
+#entry {
+    padding: 8px 10px;
+    border-radius: 0px;
+}
+
+#entry:selected {
+    background-color: #0c252b;
+    border: 1px solid #00d9ff;
+}
+
+#entry:selected #text {
+    color: #00d9ff;
+}
+
+#text {
+    color: #91a7ad;
+}
+
+#img {
+    margin-right: 8px;
+}
