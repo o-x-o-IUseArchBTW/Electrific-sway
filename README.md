@@ -9,6 +9,7 @@ A Sway rice built around a black and cyan color scheme. I wanted the colors to f
 - **SwayNC** — notification center
 - **Wofi** — application launcher
 - **Zsh** — shell
+- **Nano** - text editor
 - **Starship** — shell prompt
 
 ## Color palette
