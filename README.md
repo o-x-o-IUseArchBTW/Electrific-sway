@@ -24,6 +24,8 @@ A Sway rice built around a black and cyan color scheme. I wanted the colors to f
 
 These are my personal configs. Depending on your setup, you may need to install the required programs, fonts, or plugins and adjust some paths.
 
+My recomendation for a Wallaper https://www.reddit.com/r/linuxwallpapers/comments/q35blb/arch_ascii_logo/
+
 To setup Zsh run chsh -s /bin/zsh 
 
 Back up your existing configs before replacing them.
